@@ -1,0 +1,404 @@
+html {
+    max-width: 1000px;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    background-color: lavender;
+
+    background-image: url("./images/eras-new-bg.png");
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: 90vh;
+}
+
+body {
+    max-width:619px;
+    max-height: 800px;
+    margin: auto;
+
+    display: grid;
+    grid-template-areas:
+    "header"
+    "game"
+    "score";
+}
+
+h1,
+h2,
+p,
+.score-legend,
+#score {
+    color: white;
+}
+
+.score-legend {
+    font-size: 1.2rem;
+}
+
+#header {
+    grid-area: header;
+    transform: translateY(20px);
+}
+
+h1,
+#instructions-text {
+    letter-spacing: 0.03em;
+}
+
+h1,
+#instructions-text,
+#round-info,
+.instructions-title,
+#submit-btn,
+#play-btn,
+.score-legend  {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    filter: drop-shadow(rgb(195, 13, 195) 10px 5px 10px);
+    transition: font-size 200ms;
+    margin: 40px auto auto auto;
+}
+
+#lyrics-container {
+    background-color: white;
+    max-width: 60%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 150px;
+    display: flex;
+    transform: translateY(10px);
+}
+
+.lyrics-text {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.lyrics-text,
+p {
+    font-family: 'Indie Flower', cursive;
+}
+
+p {
+    font-size: 1em;
+}
+
+#answers-container {
+    max-width: 50%;
+    margin: 30px auto 0 auto;
+    display: none;
+}
+
+.answer {
+    margin: 0.5em auto;
+    width: 16em;
+    height: 2em;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#instructions-pop {
+    display: none;
+}
+
+#game-container {
+    grid-area: game;
+}
+
+#instructions-text {
+    margin: 1rem auto 2rem auto;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#play-btn,
+#submit-btn {
+    margin: 20px auto;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 0.5rem;
+    transform: translateY(0px);
+}
+
+#play-btn,
+#submit-btn,
+#instructions-click {
+    cursor: pointer;
+}
+
+#play-btn {
+    background-color: rgb(0, 199, 0);
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+#submit-btn {
+    background-color: rgb(228, 140, 250);
+    font-size: 1.7rem;
+    display: none;
+    z-index: 1;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+#answers-form {
+    border: none;
+    transform: translateY(0px);
+}
+
+.score-fieldset {
+    width: 8rem;
+    height: 3rem;
+    display: grid;
+    grid-area: score;
+    margin: auto auto 50px auto;
+    background-color: black;
+    transform: translateY(-10px);
+}
+
+#score {
+    font-size: 1.5rem;
+}
+
+/* #high-score {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+} */
+
+.swiftPic {
+    max-height: 55%;
+    position:fixed;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#imgRight {
+    padding-left: 400px;}
+
+#imgLeft {
+    padding-right: 400px;
+}
+
+.active {
+    opacity: 1;
+    transition: 1s;
+}
+
+.inactive {
+    opacity: 0;
+}
+
+.clouds {
+    overflow: hidden;
+}
+
+.left-cloud,
+.right-cloud {
+    position: absolute;
+    top: 0px;
+    filter: drop-shadow(rgb(195, 13, 195) 1px 50px 50px);
+    max-height: 100%;
+}
+
+@keyframes animate 
+{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.right-cloud {
+    right: 0px;
+}
+
+.left-cloud {
+    left: 0px;
+}
+
+#lc-1,
+#rc-1 {
+    width: 30%;
+    top: 1200px;
+    animation: animate calc(100s * var(--i)) linear infinite;
+}
+
+#lc-2,
+#rc-2 {
+    width: 20%;
+    top: 1000px;
+    animation: animate calc(60s * var(--i)) linear infinite;
+}
+
+#lc-3,
+#rc-3 {
+    width: 40%;
+    top: 800px;
+    animation: animate calc(50s * var(--i)) linear infinite;
+}
+
+#lc-4,
+#rc-4 {
+    width: 20%;
+    top: 600px;
+    animation: animate calc(40s * var(--i)) linear infinite;
+}
+
+#lc-5,
+#rc-5 {
+    width: 40%;
+    top: 400px;
+    animation: animate calc(45s * var(--i)) linear infinite;
+}
+
+#lc-6,
+#rc-6 {
+    width: 40%;
+    top: 200px;
+    animation: animate calc(80s * var(--i)) linear infinite;
+}
+
+#lc-7,
+#rc-7 {
+    width: 30%;
+    top: 0px;
+    animation: animate calc(40s * var(--i)) linear infinite;
+}
+
+#lc-8,
+#rc-8 {
+    width: 15%;
+    animation: animate calc(55s * var(--i)) linear infinite;
+}
+
+#lc-9,
+#rc-9 {
+    width: 20%;
+    animation: animate calc(50s * var(--i)) linear infinite;
+}
+
+#lc-10,
+#rc-10 {
+    width: 10%;
+    animation: animate calc(65s * var(--i)) linear infinite;
+}
+
+@media (min-height: 800px) {
+    body {
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 800px){
+    #imgRight,
+    #imgLeft {
+        display: none;
+    }
+}
+
+#round-container,
+#instructions-container {
+    display: none;
+    place-self: center;
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4rem;
+    border: 10px solid rgba(222, 58, 255, 0.566);
+}
+
+/** transparent background **/
+#round-background {
+    display: none;
+    background-color: black;
+    width:1600px;
+    height: 1600px;
+    place-self: center;
+    position: absolute;
+    filter: opacity(0.3);
+}
+
+#round-info {
+    display:block;
+    margin: 45px auto;
+    
+    max-width: 400px;
+    height: auto;
+    font-size: 1.3rem;
+}
+
+#close-out,
+#close-out-2 {
+    position: absolute;
+    font-size: 2rem;
+    font-family: monospace;
+    transform:translate(30px, 20px);
+    cursor: pointer;
+    filter: opacity(0.8);
+}
+
+#instructions-info {
+    max-width: 70%;
+    margin: auto;
+}
+
+.instructions-title {
+    font-size: 2rem;
+}
+
+.instructions-list {
+    color: black;
+    text-align: left;
+    font-size: 1.1rem;
+    margin: auto;
+    padding: -20px 0px 0px 0px;
+}
+
+.email {
+    font-size: 1.1rem;
+    font-style: normal;
+    color:rgb(46, 0, 58);
+    transform: translateY(-30px);
+}
+
+#contact {
+    margin: -10px;
+}
+
+.answer-show {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    transform: translateY(40px);
+    color: black;
+}
+
+#song-number {
+    font-size: 3rem;
+}

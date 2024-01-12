@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Swift - Guess the Song</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="clouds">
+        <img src="./images/clouds/left/cloud2-left.png" style="--i:1;" alt="cloud" class="left-cloud" id="lc-2">
+        <img src="./images/clouds/left/cloud1-left.png" style="--i:2;" alt="cloud" class="left-cloud" id="lc-1">
+        <img src="./images/clouds/left/cloud3-left.png" style="--i:3;" alt="cloud" class="left-cloud" id="lc-3">
+        <img src="./images/clouds/left/cloud4-left.png" style="--i:4;" alt="cloud" class="left-cloud" id="lc-4">
+        <img src="./images/clouds/left/cloud5-left.png" style="--i:5;" alt="cloud" class="left-cloud" id="lc-5">
+        <img src="./images/clouds/left/cloud1-left.png" style="--i:6;" alt="cloud" class="left-cloud" id="lc-6">
+        <img src="./images/clouds/left/cloud2-left.png" style="--i:7;" alt="cloud" class="left-cloud" id="lc-7">
+        <img src="./images/clouds/left/cloud3-left.png" style="--i:8;" alt="cloud" class="left-cloud" id="lc-8">
+        <img src="./images/clouds/left/cloud4-left.png" style="--i:9;" alt="cloud" class="left-cloud" id="lc-9">
+        <img src="./images/clouds/left/cloud5-left.png" style="--i:10" alt="cloud" class="left-cloud" id="lc-10">
+    </div>
+    <div class="clouds">
+        <img src="./images/clouds/right/cloud1-right.png" style="--i:1;" alt="cloud" class="right-cloud" id="rc-1">
+        <img src="./images/clouds/right/cloud2-right.png" style="--i:2;" alt="cloud" class="right-cloud" id="rc-2">
+        <img src="./images/clouds/right/cloud3-right.png" style="--i:3;" alt="cloud" class="right-cloud" id="rc-3">
+        <img src="./images/clouds/right/cloud4-right.png" style="--i:4;" alt="cloud" class="right-cloud" id="rc-4">
+        <img src="./images/clouds/right/cloud5-right.png" style="--i:5;" alt="cloud" class="right-cloud" id="rc-5">
+        <img src="./images/clouds/right/cloud1-right.png" style="--i:6;" alt="cloud" class="right-cloud" id="rc-6">
+        <img src="./images/clouds/right/cloud2-right.png" style="--i:7;" alt="cloud" class="right-cloud" id="rc-7">
+        <img src="./images/clouds/right/cloud3-right.png" style="--i:8;" alt="cloud" class="right-cloud" id="rc-8">
+        <img src="./images/clouds/right/cloud4-right.png" style="--i:9;" alt="cloud" class="right-cloud" id="rc-9">
+        <img src="./images/clouds/right/cloud5-right.png" style="--i:10;" alt="cloud" class="right-cloud" id="rc-10">
+    </div>
+
+
+    <main id="header">
+        <h1 class="title">Lyrics Mayhem With Me</h1>
+        <div id="instructions-click">
+            <p id="instructions-text">👉INSTRUCTIONS👈</p>
+        </div>
+    </main>
+
+    <div id="game-container">
+        <section id="lyrics-container">
+            <div class="lyrics-text"></div>
+        </section>
+
+        <fieldset id="answers-form">
+            <form action="" id="answers-container">
+                <input type="text" placeholder="Song Title" class="answer" id="song">
+                <input type="text" placeholder="Album Name (BONUS)" class="answer" id="album">
+                <input type="text" placeholder="Year Released (BONUS)" class="answer" id="year">
+                <input type="submit" name="submit" id="submit-btn" class="btn">
+            </form>
+            <button id="play-btn" class="btn">PLAY</button>
+            <!-- <submit type="submit" id="submit-btn" class="btn"><span class="submit">SUBMIT</span></submit> -->
+        </fieldset>
+    </div>
+
+    <fieldset class="score-fieldset">
+        <legend class="score-legend">SCORE</legend>
+        <div class="score-container"><span id="score">0</span></div>
+        <!-- <p id="high-score">High Score:</p> -->
+    </fieldset>
+
+    <div class="container">
+        <img src="./images/tswift.png" alt="taylor swift" class="swiftPic active inactive" id="imgLeft">
+        <img src="./images/tswift2.png" alt="taylor swift" class="swiftPic active inactive" id="imgRight">
+    </div>
+
+    <div id="round-background"></div>
+    <div id="round-container">
+        <legend id="close-out">x</legend>
+        <div id="round-info">
+            <p class="answer-show">Song: <span id="song-text"></span></p>
+            <p class="answer-show">Album: <span id="album-text"></span></p>
+            <p class="answer-show">Year: <span id="year-text"></span></p>
+            <p class="answer-show">#: <span id="song-number"></span></p>
+        </div>
+    </div>
+
+    <div id="instructions-container">
+        <legend id="close-out-2">x</legend>
+        <div id="instructions-info">
+            <h3 class="instructions-title">Welcome, Swifties</h3>
+            <p class="instructions-list">
+            <ul class="instructions-list">
+                <li>Guess the correct song title</li>
+                <li>Bonus points for other answers</li>
+                <li>Letter case doesn't matter</li>
+                <li>Answers are lenient (i.e. commas & special characters), but spelling matters</li>
+                <li>Reach out if something doesn't work!</li>
+            </ul>
+            </p>
+            <address id="contact">
+                <a href="mailto:12jawears@gmail.com" class="email">Email Me</a>
+            </address>
+        </div>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
