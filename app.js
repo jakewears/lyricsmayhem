@@ -1717,7 +1717,7 @@ let swiftSongs = [
         album: ["beautiful eyes"],
         year: "2008"
     },
-    /*
+    /* -- these songs aren't completely in Taylor's "main musical library"
         {
             index: 215,
             lyric: "may your days be merry and bright",
